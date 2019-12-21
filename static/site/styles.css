@@ -1,0 +1,166 @@
+header.mdl-layout__header.mdl-layout__header--scroll {
+  background-color: black;
+  box-shadow: 0 5px 25px 0 rgba(244, 244, 244, 0.1);
+
+
+}
+
+body {
+  background-color: black;
+  color: white;
+
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.top-section {
+  margin-top: 120px;
+}
+
+.q-bar1 {
+
+  min-height: 150px;
+}
+.q-bar2 {
+
+  min-height: 150px;
+}
+
+.quote-bar-head {
+  float: right;
+  width: 55%;
+  text-align: center;
+  font-size: 70px;
+  font-family: "Tahoma", sans-serif;
+  letter-spacing: 40px;
+  -webkit-animation-name: fadeIn; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+}
+
+.quote-bar-head2 {
+  float: right;
+  width: 57%;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Tahoma", sans-serif;
+  -webkit-animation-name: fadeIn; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 15s; /* Safari 4.0 - 8.0 */
+}
+.quote-bar-head3 {
+  float: right;
+  width: 57%;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Tahoma", sans-serif;
+  -webkit-animation-name: fadeIn; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quote-bar {
+  float: left;
+  width: 0;
+  height: 20px;
+  position: fixed;
+  border-radius: 15px;
+  -webkit-animation-name: move; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  background-color: #260606;
+
+}
+
+.quote-bar2 {
+  width: 0;
+  position: fixed;
+  height: 20px;
+  border-radius: 15px;
+  -webkit-animation-name: move2; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  background-color: #001a00;
+}
+
+.quote-bar3 {
+  width: 0;
+  position: fixed;
+  height: 20px;
+  border-radius: 15px;
+  -webkit-animation-name: move3; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  background-color: #0a102c;
+}
+
+
+@-webkit-keyframes move {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+
+@keyframes move {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+@-webkit-keyframes move2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes move2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes move3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+
+@keyframes move3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
