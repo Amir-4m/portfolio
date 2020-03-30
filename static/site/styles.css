@@ -156,3 +156,92 @@ h1, h2, h3, h4, h5 {
   padding: 30px 0;
   background-color: black;
 }
+
+
+.proj-card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.proj-card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.proj-card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.proj-card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -35px;
+  background: gray;
+  height: 35px;
+  position: relative;
+  opacity: 0.8;
+}
+
+.card_title p {
+  padding: 8px 0;
+  color: #f5f5f5a1;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.card_title a {
+  text-decoration: none;
+}
+
+.proj-card .proj_desc {
+  position: relative;
+  text-align: center;
+  bottom: 85%;
+  margin: 0;
+  font-style: italic;
+  color: black;
+  font-size: 1.1rem;
+  visibility: hidden;
+  height: 0;
+}
+
+.proj-card:hover .proj_desc {
+  visibility: visible;
+}
+
+.proj-card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+  -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.proj-card:hover img {
+  opacity: 0.1;
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}

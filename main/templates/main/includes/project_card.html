@@ -1,0 +1,13 @@
+<div class="proj-card">
+  {% if instance.image %}
+
+    <div class="card_image"><img src="{{ instance.image.url }}"/></div>
+    <p class="proj_desc">{{ instance.description }}</p>
+
+  {% endif %}
+  <div class="card_title title-black">
+    <a class="proj-url" href="{% if instance.project_url %}{{ project_url }}{% endif %}" target="_blank">
+      <p>{{ instance.name }}</p>
+    </a>
+  </div>
+</div>
