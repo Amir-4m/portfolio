@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """portfolio URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:

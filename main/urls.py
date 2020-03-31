@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from django.urls import path
 from .views import HomePage
 

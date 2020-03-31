@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Django settings for portfolio project.
 
@@ -19,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#u&654nslsw=4jd0_qr&zhu_j^^i+%z3)$w*_qbq#9&wi!6ax^'
+SECRET_KEY = 'your-secret-key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
