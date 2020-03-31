@@ -102,22 +102,54 @@ h1, h2, h3, h4, h5 {
 }
 
 .project-section {
-  height: 100vh;
   background-color: white;
+  padding-bottom: 30px;
+
 }
 
 .project-section h3 {
   margin: 0;
+  color: black;
 }
 
 .project-head {
   padding: 30px 0;
-  background-color: black;
+  background-color: white;
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+
 }
 
 .skills-section {
-  height: 100vh;
-  background-color: white;
+  background-color: black;
+  padding-bottom: 30px;
+
+}
+
+.skill-name {
+  color: white;
+  font-size: 1.163rem;
+  font-weight: 600;
+}
+
+.skill-cell {
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.mdl-progress > .bufferbar {
+  border-radius: 25px;
+}
+
+.mdl-progress {
+  height: 20px;
+  border-radius: 100px;
+  margin: 10px auto auto;
+}
+
+.mdl-progress > .progressbar {
+  background-color: #3F51B5;
+  border-radius: 25px;
 }
 
 .skills-section h3 {
@@ -129,23 +161,58 @@ h1, h2, h3, h4, h5 {
   background-color: black;
 }
 
+.progress-skill-wrapper {
+  margin: auto;
+}
+
 .about-section {
-  height: 100vh;
   background-color: white;
+  padding-bottom: 30px;
+
+
 }
 
 .about-section h3 {
   margin: 0;
+  color: black;
 }
 
 .about-head {
   padding: 30px 0;
-  background-color: black;
+  background-color: white;
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h4 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.about-content h5 {
+  color: black;
+  margin-bottom: 30px;
+}
+
+.about-desc {
+  color: black;
+  padding: 0 150px;
+  line-height: 2.5rem;
+  font-size: 1.063rem;
+}
+
+.about-content img {
+  width: 180px;
+  margin: 30px 0;
+  border-radius: 130px;
 }
 
 .contact-section {
-  height: 100vh;
-  background-color: white;
+  background-color: black;
+  text-align: center;
 }
 
 .contact-section h3 {
@@ -157,13 +224,17 @@ h1, h2, h3, h4, h5 {
   background-color: black;
 }
 
+.contact-content img {
+  width: 60px;
+}
+
 
 .proj-card {
   margin: 30px auto;
   width: 300px;
   height: 300px;
   border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25), -5px -5px 30px 0px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   transition: 0.4s;
 }
@@ -223,8 +294,8 @@ h1, h2, h3, h4, h5 {
 
 .proj-card:hover {
   transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-  -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25), -5px -5px 30px 0px rgba(0, 0, 0, 0.22);
+
 }
 
 .proj-card:hover img {
@@ -239,9 +310,58 @@ h1, h2, h3, h4, h5 {
   color: black;
 }
 
-@media all and (max-width: 500px) {
+.site-footer {
+  margin-top: 90px;
+  background-color: black;
+}
+
+.site-footer p {
+  text-align: center;
+  width: 100%;
+}
+
+.mdl-layout__content {
+  flex: 1 0 auto;
+}
+
+#contact-form {
+  margin-top: 100px;
+}
+
+#contact-form .mdl-textfield {
+  width: 70%;
+}
+
+#contact-form .mdl-textfield__label {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.contact-btn button {
+  color: #ffffff9e;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 960px) {
+  .about-desc {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .card-list {
-    /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
+
+  .about-desc {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-content img {
+    width: 34px;
+    margin-bottom: 20px;
+  }
+
 }

@@ -29,3 +29,18 @@ class Project(models.Model):
     in_progress = models.BooleanField(default=False)
     project_url = models.URLField()
     image = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
+
+
+class Skill(models.Model):
+    SKILL_CHOICES = [
+        ('beginner', 25),
+        ('mid-level', 50),
+        ('intermediate', 65),
+        ('advanced', 90)
+    ]
+    name = models.CharField(max_length=120, blank=False, null=False)
+    proficiency = models.CharField(max_length=120, choices=SKILL_CHOICES)
+
+
+class Message(models.Model):
+    text = models.TextField(max_length=1024, blank=True, null=True)

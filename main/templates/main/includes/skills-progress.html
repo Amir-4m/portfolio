@@ -1,0 +1,7 @@
+<span class="skill-name">{{ instance.name }}</span>
+<div id="skill-{{ instance.id }}" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#skill-{{ instance.id }}').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress({{ instance.get_proficiency_display }});
+  });
+</script>

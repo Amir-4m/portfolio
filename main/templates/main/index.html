@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
   <div class="top-section">
     <div class="top-head">
@@ -16,31 +17,98 @@
     <div class="project-head">
       <h3>Projects</h3>
     </div>
-  <div class="project-content">
-    <div class="mdl-grid">
-      {% for project in projects %}
-      <div class="mdl-cell mdl-cell--4-col">
-      {% include 'main/includes/project_card.html' with instance=project %}
+    <div class="project-content">
+      <div class="mdl-grid">
+        {% for project in projects %}
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+            {% include 'main/includes/project_card.html' with instance=project %}
+          </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
 
-  </div>
+    </div>
   </div>
 
   <div class="skills-section">
     <div class="skills-head">
       <h3>Skills</h3>
     </div>
+    <div class="skills-content">
+      <div class="mdl-grid">
+        {% for skill in skills %}
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone skill-cell">
+            {% include 'main/includes/skills-progress.html' with instance=skill %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
   <div class="about-section">
     <div class="about-head">
       <h3>About Me</h3>
     </div>
+    <div class="about-content">
+      <img src="{% static 'site/images/self.jpeg' %}">
+      <h4>Amir mohammad Amiri</h4>
+      <h5>(Backend Developer)</h5>
+      <p class="about-desc">
+        My name is Amir mohammad Amiri.
+        I learned how to code when I was 16.
+        I continued my code learning and started my first web development in 2017.<br>
+        I have got python programming certification from Sematech institute .<br>
+        I have 2 years of experience in projects like customer satisfaction, web development, web design,
+        crawling applications and etc ...<br>
+        currently I am a software engineering student at Islamic azad university Tehran north branch.<br>
+        my main purpose is that I want to grow my knowledge in technology.
+      </p>
+    </div>
   </div>
   <div class="contact-section">
     <div class="contact-head">
       <h3>Contact</h3>
+    </div>
+    <div class="contact-content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <a href="https://t.me/amiir_4m" target="_blank">
+            <img src="{% static 'site/images/tele.png' %}">
+          </a>
+        </div>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+          <a href="https://www.instagram.com/the.amirii/" target="_blank">
+            <img src="{% static 'site/images/insta.png' %}">
+          </a>
+        </div>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+
+          <a href="https://www.linkedin.com/in/amir-mohammad-amiri-7bab0518b/" target="_blank">
+            <img src="{% static 'site/images/link.png' %}">
+          </a>
+
+        </div>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+
+          <a href="https://github.com/Amiiwr1" target="_blank">
+            <img src="{% static 'site/images/git.png' %}">
+          </a>
+
+        </div>
+      </div>
+      <form method="POST" id="contact-form">{% csrf_token %}
+        {% for field in form.visible_fields %}
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            {{ field }}
+            <label class="mdl-textfield__label" for="{{ field.id_for_label }}">
+              {{ field.label }}
+            </label>
+          </div>
+        {% endfor %}
+        <div class="contact-btn">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Send
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 
