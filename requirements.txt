@@ -13,7 +13,7 @@ chardet==3.0.4
 corona-api==0.4.4
 cryptography==2.8
 decorator==4.4.2
-Django==2.2.5
+Django==2.2.21
 django-extensions==2.2.7
 future==0.18.2
 google-api-python-client==1.7.11
